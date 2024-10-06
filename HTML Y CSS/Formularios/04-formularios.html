@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios HTML</title>
+</head>
+<body>
+    <h1 align="center">FORMULARIOS EN HTML</h1>
+    <hr>
+<!-- disabled desabilita -->
+        <!-- readonly solo lectura del contenido -->
+        <!-- autofocus se recarga y deja en una casilla especifica  -->
+        <!-- expresiones regulares estudiar !!! -->
+    <form action="" method="get">
+        <fieldset>
+            <legend>Datos personales</legend>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" value="demo"  minlength="3" maxlength="10" size="10"  > 
+        
+        <br><br>
+        <label for="Usuario">Usuario:</label>
+        <input type="text" name="Usu" id="Usuario" autofocus pattern="[A-Za-z]{3,10}" title="Debe contener de 3 a 10 letras.">
+        <br><br>
+        <label for="pass">Contraseña:</label>
+        <input type="password" name="pass" id="pass">
+        <br><br>
+        <label for="email">Correo electronico:</label>
+        <input type="email" name="email" id="email">
+        <br><br>
+        <label for="edad">edad:</label>
+        <input type="number" name="" id="" min="18" max="50">
+    </fieldset>
+
+        <br><br>
+        <label for="tel">Telefono:</label>
+        <input type="tel" name="tel" id="tel" >
+        <br><br>
+        <label for="url">URL:</label>
+        <input type="url" name="url" id="url" placeholder="Direccion web">
+        <br><br>
+        <label for="fecha">Fecha:</label>
+        <input type="date" name="fecha" id="fecha" value="2006-10-04">
+        <label for="hora">Hora:</label>
+        <input type="time" name="hora" id="hora" value="20:30:00">
+        <br><br>
+        <label for="sexo">Sexo</label>
+        <input type="radio" name="sexo" id="sexo" value="hombre" checked>hombre
+        <input type="radio" name="sexo" id="sexo" value="mujer">mujer
+        <input type="radio" name="sexo" id="sexo" value="otro">otro
+        <br><br>
+        <label for="hobbies">Pasatiempos:</label><br>
+        <input type="checkbox" name="hobbies" id="hobbies" value="programar">programar
+        <input type="checkbox" name="hobbies" id="hobbies" value="leer">leer
+        <input type="checkbox" name="hobbies" id="hobbies" value="Ping pong">Ping pong
+        <br><br>
+        <label for="color">Color</label>
+        <input type="color" name="color" id="color">
+        <br><br>
+        <label for="file" >Subir archivo:</label>
+        <input type="file" name="file" id="file">
+        <br><br>
+        <input type="button" value="clícqueame" onclick="alert('Aaaaaaaaaaaaaaaaa')" onmouseover="alert('suavemente')">
+        <br><br>
+        <input type="image" src="/SRV/img/lamecha.png" alt="xd" title=" GO" width="15%" onclick="alert('GO lenguaje de programación')">
+        <br><br>
+        <label for="browser">Navegador de preferencia</label>
+        <input type="text" name="browser" id="browser" 
+        list="browsers" >
+        <datalist id="browsers">
+            <option value="chrome"></option>
+            <option value="Firefox"></option>
+            <option value="Safari"></option>
+            <option value="Edge"></option>
+            <option value="Opera"></option>
+            
+        </datalist>
+        <br><br>
+        <label for="mes">Mes de ingreso:</label>
+        <input type="month" name="mes" id="mes">
+        <br><br>
+        <label for="inten">Intensidad (entre 0 y 50):</label>
+        <input type="range" name="inten" id="inten" min="0" max="50" step="2">
+        <br><br>
+        <label for="comentarios">comentarios</label>
+        <br>
+        <textarea name="comentarios" id="comentarios" rows="10" cols="40" placeholder="hazme saber tus comentarios"></textarea>
+        <br><br>
+        <label for="ciudadnac">Ciudad de nacimiento:</label>
+        <br>
+        <select name="ciudadnac" id="ciudadnac" multiple>
+            <option value="Bucaramanga">Bucaramanga</option>
+            <option value="Boavita" selected>Boavita</option>
+            <option value="Cali">Cali</option>
+            <option value="Bogota">Bogota</option>
+            <option value="Tunja">Tunja</option>
+        </select>
+        <br><br>
+
+        <input type="submit" value="Enviar">
+        <br><br>
+        <input type="reset" value="Limpiar todo">
+        <br><br>
+        <input type="hidden" name="categoria" value=" backend">
+    </form>
+</body>
+</html>
