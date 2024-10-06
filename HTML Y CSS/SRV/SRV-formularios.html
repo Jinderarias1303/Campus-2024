@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formularios</title>
+</head>
+<body>
+    <br>
+    <hr>
+    <br>
+    <h1 align="center">Ejercicio de formularios SRV</h1>
+    <br>
+    <hr>
+<form action="" method="get">
+    <label for="Nombre">Nombre:</label>
+    <input type="text" name="Usu" id="Nombre" autofocus pattern="[A-Za-z]{3,10}" title="Debe contener de 3 a 10 letras.">
+    <br><br>
+
+    <label for="email">Correo:</label>
+    <input type="email" name="email" id="email">
+    <br><br>
+
+    <label for="url">Url:</label>
+    <input type="url" name="url" id="url" placeholder="Escribe la url de tu página">
+    <br><br>
+
+    <label for="Fecha">Fecha:</label>
+    <input type="date" name="Fecha" id="Fecha">
+    <br><br>
+
+    <label for="Hora">Tiempo:</label>
+    <input type="time" name="Hora" id="Hora">
+    <br><br>
+
+    <label for=" Fecha y Hora">Fecha y Hora:</label>
+    <input type="datetime-local" name="Fecha y Hora" id="Fecha y Hora">
+    <br><br>
+
+    <label for="Mes">Mes:</label>
+    <input type="month" name="Mes" id="Mes">
+    <br><br>
+
+    <label for="Semana">Semana:</label>
+    <input type="week" name="Semana" id="Semana">
+    <br><br>
+
+    <label for="num">Numero (min -10, max 10):</label>
+    <input type="number" name="num" id="num" maxlength="10" minlength="-10">
+    <br><br>
+
+    <label for="Telefono">Telefono:</label>
+    <input type="tel" name="Telefono" id="Telefono">
+    <br><br>
+
+    <label for="busqueda">Termino de búsqueda:</label>
+    <input type="search" name="busqueda" id="busqueda">
+    <br><br>
+
+    <label for="Color">Color favorito:</label>
+    <input type="color" name="Color" id="Color">
+    <br><br><br>
+    <input type="submit" value="Enviar">
+    <br><br>
+    
+    <hr>
+    <input type="hidden" name="categoria" value=" backend">
+</form>
+</body>
+</html>
+
+
