@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro - Mi Web</title>
+    <link rel="stylesheet" href="./estilos/stile.css">
+</head>
+<body align="center">
+    <form action="" method="get">   
+        <section>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" maxlength="50">
+            <br><br><br><br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" id="apellido" maxlength="50">
+            <br><br>
+            <br><br>
+            <label for="sexo">Sexo:</label>
+            <input type="radio" name="sexo" id="sexo-hombre" value="hombre"> Hombre
+            <input type="radio" name="sexo" id="sexo-mujer" value="mujer"> Mujer
+            <br><br>
+            <br><br>
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" name="correo" id="correo">
+            <br><br>
+            <br><br>
+            <label for="Población">Población:</label>
+            <input type="text" name="Población" id="Población" list="población">
+            <datalist id="población">
+                <option value="Bucaramanga"></option>
+                <option value="Girón"></option>
+                <option value="Floridablanca"></option>
+                <option value="Piedecuesta"></option>
+            </datalist>
+            <br><br>
+            <br><br>
+            <textarea name="comentarios" id="comentarios" rows="5" cols="40" placeholder="Comentarios sobre el registro"></textarea>
+            <br><br>
+            <br><br>
+            <input type="checkbox" name="verificación" id="verificación" value="Deseo recibir información sobre novedades y ofertas" checked> Deseo recibir información sobre novedades y ofertas
+            <br>
+            <input type="checkbox" name="verificación" id="condiciones" value=" "> Declaro haber leído y acepto las condiciones generales del programa y la narrativa sobre protección de datos
+            <br><br>
+            <input type="submit" value="Enviar">
+            <br><br>
+            <input type="hidden" name="categoria" value="backend">
+        </section>
+    </form>
+</body>
+</html>
