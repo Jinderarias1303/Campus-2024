@@ -9,14 +9,19 @@ body {
     background: linear-gradient(to right, #4286f4, #373B44); 
     width: 100%;
     height: 98%;
+    
 }
 
 section {
     
-   
+    border-color: #373B44;
+    border-radius: 5%;
     background-color: rgb(37, 122, 122);
     padding: 20px;
     max-width: 500px;
+    padding: 10%;
+    
+
     
     
 }
