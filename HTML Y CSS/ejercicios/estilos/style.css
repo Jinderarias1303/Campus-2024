@@ -1,0 +1,33 @@
+.principal{
+padding: 10px;
+border: 2px solid red;
+height: 150px;
+}
+.caja1{
+    border: 3px solid green;
+    width: 50%;
+    height: 40px;
+    background: #f8f3d6;
+    
+    
+}
+.caja2{
+    position: absolute;
+    border: 3px solid rgb(0, 55, 128);
+    width: 50%;
+    height: 40px;
+    left:50px ;
+    top: 70px;
+    background: #f8f3d6;
+
+    
+}
+.caja3{
+    position: absolute;
+    left: 100px;    
+    border: 3px solid rgb(255, 238, 0);
+    width: 50%;
+    height: 40px;
+    top:120px;
+    background: #f8f3d6;
+}
