@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-sazing</title>
+    <style>
+        .caja-roja{
+            background-color: red;
+            color: white;
+            height: 200px;
+            width: 200px;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 5px solid tomato;
+            box-sizing: border-box;
+           margin-bottom: 5px;
+           display: block;
+           /* display: inline-block; */
+        }
+        /* border-box se mantiene en el tamaño predeterminado 200px */
+        /* display block ocupa todo el ancho posible in-line en linea inline-block ancho y alto respetado */
+        #caja1{
+            /* display: none; */
+            /* visibility: hidden; */
+            opacity: 0.1;
+        }
+        #caja2{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="caja-roja" id="caja1">caja 1 </div>
+    <div class="caja-roja" id="caja2">caja 2 </div>
+</body>
+</html>

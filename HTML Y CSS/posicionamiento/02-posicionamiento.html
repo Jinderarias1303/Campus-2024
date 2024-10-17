@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>posicionamiento</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 2rem;font-size: 2rem;
+            font-family: sans-serif;
+            background-color: black;
+        }
+        h1{
+            color: white;
+            font-size: 3rem;
+            text-align: center;
+        }
+        div{
+            border-radius: 5px;
+            position: static;
+            
+        }
+        .static{
+            background: #f29d9d;
+        }
+        .relative{
+            background: #7fdaa0;
+            position: relative; 
+            top: 10px;
+            left: 10px;
+        }
+        .absolute{
+            background: #6374d7;
+            position: absolute;
+            top: 10px;
+        }
+        .fixed{
+            background: #a25294;
+            position: fixed;
+            /* top: 50%; */
+        }
+        .sticky{
+            background: #a3ba57;
+            position: relative;
+            z-index: 1;
+        } 
+        .padre{
+            position: relative;
+            background: #6e6e6e;
+        }
+        body{
+            height: 200vh;   
+        }  
+        
+    </style>
+</head>
+<body>
+    <h1>Posicionamiento en CSS</h1>
+    <div class="padre">
+        <div class="static">satatic</div>
+        <div class="relative">relative</div>
+        <div class="absolute">absolute</div>
+        <div class="fixed">fixed</div>
+        <div class="sticky">sticky</div>
+    </div>
+    
+</body>
+</html>
