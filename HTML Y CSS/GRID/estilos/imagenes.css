@@ -1,0 +1,16 @@
+.cont{
+    border: 1px solid black; 
+    width: 90vw;
+    height: 90vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+.caja1{
+    width: 20%;
+}
+div{
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:100% ;
+}
