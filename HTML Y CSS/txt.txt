@@ -41,3 +41,4 @@ flex-wrap: wrap-reverse;
 align-content: space-between;
 justify-content: center;
  
+responsive 
