@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cajas-flex.css">
+    <title>Cajas Flex</title>
+    <style>
+       * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: beige;
+}
+
+.contenedor {
+    width: 80%;
+    height: 95vh;
+    border: 1px solid black;
+    margin: 0 auto;
+    background-color: lightgrey;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 3px;
+}
+
+.caja {
+    border: 1px solid gray;
+    /* margin: 3px; */
+    height: 25vh;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#caja1 {
+    background-color: lightblue;
+    order: 2;
+    flex-grow: 1;
+    flex-basis: 50%;
+}
+
+#caja2 {
+    background-color: lightcoral;
+    order: 4;
+    flex-grow: 1;
+}
+
+#caja3 {
+    background-color: lightgreen;
+    order: 1;
+    flex-grow: 1;
+}
+
+#caja4 {
+    background-color: linen;
+    order: 3;
+    flex-grow: 1;
+}
+@media(min-width:768px )and (max-width:1024px)
+{
+    #caja1 {
+    background-color: lightblue;
+    order: 1;
+    flex-grow: 1;
+    flex-basis: 50%;
+}
+
+#caja2 {
+    background-color: lightcoral;
+    order: 2;
+    flex-grow: 1;
+}
+
+#caja3 {
+    background-color: lightgreen;
+    order: 3;
+    flex-grow: 1;
+}
+
+#caja4 {
+    background-color: linen;
+    order: 4;
+    flex-grow: 1;
+}
+}
+@media(max-width:768px )
+{
+    #caja1 {
+    background-color: lightblue;
+    order: 4;
+    flex-grow: 1;
+    flex-basis: 50%;
+}
+
+#caja2 {
+    background-color: lightcoral;
+    order: 3;
+    flex-grow: 1;
+}
+
+#caja3 {
+    background-color: lightgreen;
+    order: 2;
+    flex-grow: 1;
+}
+
+#caja4 {
+    background-color: linen;
+    order: 1;
+    flex-grow: 1;
+}
+}
+
+    </style>
+</head>
+<body>
+    <h1>Aprendiendo Flex</h1>
+
+    <div class="contenedor">
+        <div class="caja" id="caja1">Item 1</div>
+        <div class="caja" id="caja2">Item 2</div>
+        <div class="caja" id="caja3">Item 3</div>
+        <div class="caja" id="caja4">Item 4</div>
+    </div>
+</body>
+</html>
