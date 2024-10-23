@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .cont{
+            width: 100%;
+            height: 98vh;
+            gap: 5px;
+            display: grid;
+            grid-template-columns: repeat(3 , 1fr);
+            grid-template-rows: repeat(3, 1fr);
+          
+        }
+        .caja1{
+            background-color: rgb(255 105 0);
+        }
+        .caja2{
+            background-color: rgb(255 105 0);
+            
+        }
+        .caja3{
+            background-color: #00696c;    
+        }
+        .caja4{
+            background-color:#680a2f;    
+        }
+        .caja5{
+            background-color: #680a2f;    
+        }
+        .caja6{
+            background-color: #680a2f;    
+        }
+        .caja1{
+            grid-row: 1 / span 2;
+        }
+        .caja3{
+            grid-column: 3;
+            grid-row: 1 / span 2;
+        }
+        .caja4{
+            grid-row: 2 / span 3;
+        }
+        
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div class="cont">
+    <div class="caja1"></div>
+    <div class="caja2"></div>
+    <div class="caja3"></div>  
+    <div class="caja4"></div>
+    <div class="caja5"></div>
+    <div class="caja6"></div>
+</div>
+</body>
+</html>

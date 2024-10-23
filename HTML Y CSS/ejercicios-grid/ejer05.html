@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagina-estilo #1 </title>
+    <style>
+        @media(min-width:768px ) and (max-width:960px){
+            .cont{
+            border: 1px solid #2b84a5;
+            padding: 5px;
+            gap: 20px;
+            height: 97vh;
+            display: grid;
+            grid-template-columns: repeat(3 , 1fr);
+            grid-template-rows: repeat(3 ,1fr);
+        }
+        
+        .blog{
+            border: 1px solid #2b84a5;
+            background-color: #cfe8dc;
+            border-radius: 10px;
+            padding: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+        .blog{
+            grid-row: 1 / span 2;
+        }
+        .article{
+            padding: 10px;
+            font-family: Arial,  sans-serif;
+            font-size: 20px;
+        }
+        .article{
+            grid-column: 2 / span 3;
+            grid-row: 1 / span 2;
+        }
+        .other{
+            padding: 10px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 19px;
+            border-right: 2px solid #a2a2a2 ;
+            
+
+        }
+        .other{
+            grid-column: 1;
+        }
+        .contact{
+            
+            padding: 10px;
+            border: 1px solid #2b84a5;
+            background-color: #cfe8dc;
+            border-radius: 10px;
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',Geneva, Verdana, sans-serif;
+        }
+        .contact{
+            grid-column: 2 / span 3;
+        }
+    }
+        @media(min-width:960px){
+            .cont{
+            border: 1px solid #2b84a5;
+            padding: 5px;
+            gap: 20px;
+            height: 97vh;
+            display: grid;
+            grid-template-columns: repeat(3 , 1fr);
+            grid-template-rows: repeat(3 ,1fr);
+        }
+        .blog{
+            border: 1px solid #2b84a5;
+            background-color: #cfe8dc;
+            border-radius: 10px;
+            padding: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+        .blog{
+            grid-column: 1 / -1;
+        }
+        .article{
+            padding: 10px;
+            font-family: Arial,  sans-serif;
+            font-size: 20px;
+        }
+        .article{
+            grid-column: 2 / span 3;
+        }
+        .other{
+            padding: 10px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 19px;
+            border-right: 2px solid #a2a2a2 ;
+        }
+        .other{
+            grid-row: 2;
+        }
+        .contact{
+            
+            padding: 10px;
+            border: 1px solid #2b84a5;
+            background-color: #cfe8dc;
+            border-radius: 10px;
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',Geneva, Verdana, sans-serif;
+        }
+        .contact{
+            grid-column: 1 / -1;
+        }
+        }
+        @media(min-width:768px){
+            .cont{
+            border: 1px solid #2b84a5;
+            padding: 5px;
+            gap: 20px;
+            height: 97vh;
+            display: grid;
+            grid-template-columns: repeat(1 , 1fr);
+            grid-template-rows: repeat(1 ,1fr);
+        }
+        .blog{
+            border: 1px solid #2b84a5;
+            background-color: #cfe8dc;
+            border-radius: 10px;
+            padding: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+        .blog{
+            
+        }
+    }
+       
+        
+
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="blog">
+            <p>This is my lovely blog</p>
+        </div>
+        <div class="article">
+            <p> <h1>My article </h1><br>
+                Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+                laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+                egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
+                Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue.
+                Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id
+                ornare felis, eget fermentum sapien.
+                <br><br>
+                Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus
+                turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget
+                aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed
+                lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget
+                purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                mus.
+            </p>
+        </div>
+        <div class="other">
+            <p>
+                <h1>Other things</h1>
+                Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus
+                turpis est, posuere sit amet dapibus ut, facilisis sed est.
+            </p>
+        </div>
+        <div class="contact">
+            <p>Contact me@mysite.com</p>
+        </div>
+    </div>
+</body>
+</html>
