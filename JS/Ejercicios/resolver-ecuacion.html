@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Da</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let val_a = Number(prompt("ingrese el valor de a: "));
+    let val_b = Number(prompt("ingrese el valor de b: "));
+    let val_c = Number( prompt("ingrese el valor de c: "));
+    let deno = 2 * val_a
+    let opera = val_b ** 2 - 4 * val_a * val_c
+    
+    if (deno != 0 && opera > 0) {
+        let x1 = (-val_b + Math.sqrt(opera) ) /deno
+        let x2 = (-val_b - Math.sqrt(opera)) /deno
+        document.write(x1)
+        document.write(x2)
+    }
+</script>
+</html>

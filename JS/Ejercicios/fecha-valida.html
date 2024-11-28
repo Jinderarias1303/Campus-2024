@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+let fecha = prompt("introduce la fecha en formato 00/00/0000")
+let dias = parseInt( fecha.slice(0,2));
+// document.write("el dia es: " + dias + "<br>")
+
+let meses =parseFloat( fecha.slice(3,5));
+// document.write("el mes es: " + meses + "<br>")
+
+let año =parseInt( fecha.slice(6));
+// document.write("el año es: " + año + "<br>")
+
+if(dias > 31 || dias < 1){
+    document.write("no existe este dia" + "<br>")
+}
+else if(meses >12 || meses < 1){
+    document.write("el mes no puede ser superior a 12 becerro" + "<br>")
+}
+else if(año > 2024){
+    document.write("el año no puede ser mayor 2024" + "<br>")
+}
+else{
+    document.write("la fecha es valida")
+}
+
+</script>
+</html>
