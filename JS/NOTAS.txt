@@ -1,2 +1,138 @@
-ternario investigar 
-EJ fecha
+push:
+
+Método que se usa para agregar un nuevo elemento al final de un array.
+Ejemplo:
+javascript
+Copiar código
+const numeros = [1, 2, 3];
+numeros.push(4); // Ahora el array es [1, 2, 3, 4]
+forEach:
+
+Método que recorre cada elemento de un array y ejecuta una función para cada uno de ellos.
+Ejemplo:
+javascript
+Copiar código
+const frutas = ["manzana", "pera", "uva"];
+frutas.forEach(fruta => {
+    console.log(fruta); // Imprime cada fruta
+});
+toLowerCase:
+
+Método que convierte una cadena de texto a minúsculas.
+Ejemplo:
+javascript
+Copiar código
+const saludo = "Hola";
+console.log(saludo.toLowerCase()); // Resultado: "hola"
+
+
+Aquí tienes una breve descripción de los métodos splice, find y findIndex en JavaScript:
+
+1. splice
+¿Qué hace?
+Modifica un array eliminando, reemplazando o agregando elementos en una posición específica.
+
+Sintaxis:
+
+javascript
+Copiar código
+array.splice(índice, cantidadEliminar, elemento1, elemento2, ...);
+índice: Posición donde se realizarán los cambios.
+cantidadEliminar: Cantidad de elementos a eliminar desde el índice (puede ser 0 si no quieres eliminar).
+elemento1, elemento2, ...: (Opcional) Elementos que se agregarán en la posición especificada.
+Ejemplo:
+
+javascript
+Copiar código
+const numeros = [1, 2, 3, 4];
+numeros.splice(1, 2, 99, 100); // Elimina 2 elementos desde el índice 1 y agrega 99, 100
+console.log(numeros); // Resultado: [1, 99, 100, 4]
+2. find
+¿Qué hace?
+Devuelve el primer elemento en un array que cumple con una condición (callback). Si no encuentra ninguno, devuelve undefined.
+
+Sintaxis:
+
+javascript
+Copiar código
+array.find(callback(elemento, índice, array));
+callback: Función que evalúa cada elemento hasta encontrar uno que cumpla la condición.
+Ejemplo:
+
+javascript
+Copiar código
+const mascotas = [
+    { nombre: "Fido", edad: 3 },
+    { nombre: "Michi", edad: 2 }
+];
+const resultado = mascotas.find(m => m.edad === 3); // Busca mascota con edad 3
+console.log(resultado); // Resultado: { nombre: "Fido", edad: 3 }
+3. findIndex
+¿Qué hace?
+Devuelve el índice del primer elemento que cumple con una condición. Si no encuentra ninguno, devuelve -1.
+
+Sintaxis:
+
+javascript
+Copiar código
+array.findIndex(callback(elemento, índice, array));
+callback: Función que evalúa cada elemento hasta encontrar uno que cumpla la condición.
+Ejemplo:
+
+javascript
+Copiar código
+const numeros = [10, 20, 30, 40];
+const índice = numeros.findIndex(n => n > 25); // Busca el índice del primer número mayor a 25
+console.log(índice); // Resultado: 2
+Diferencias entre find y findIndex:
+find: Devuelve el elemento encontrado.
+findIndex: Devuelve el índice del elemento encontrado.
+
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+split()
+¿Qué hace?
+Divide una cadena en un arreglo según un separador.
+Ejemplo:
+javascript
+Copiar código
+const texto = "manzana,pera,fresa";
+const frutas = texto.split(",");
+console.log(frutas); // ["manzana", "pera", "fresa"]
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+charAt()
+¿Qué hace?
+Devuelve el carácter en una posición específica.
+Ejemplo:
+javascript
+Copiar código
+const texto = "Hola";
+console.log(texto.charAt(1)); // "o"
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ Object.keys()
+¿Qué hace?
+Devuelve un arreglo con las claves de un objeto.
+Ejemplo:
+javascript
+Copiar código
+const persona = { nombre: "Juan", edad: 30 };
+console.log(Object.keys(persona)); // ["nombre", "edad"]
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+2. Object.values()
+¿Qué hace?
+Devuelve un arreglo con los valores de un objeto.
+Ejemplo:
+javascript
+Copiar código
+const persona = { nombre: "Juan", edad: 30 };
+console.log(Object.values(persona)); // ["Juan", 30]
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Object.entries()
+¿Qué hace?
+Devuelve un arreglo con las claves y valores de un objeto como pares [clave, valor].
+Ejemplo:
+javascript
+Copiar código
+const persona = { nombre: "Juan", edad: 30 };
+console.log(Object.entries(persona)); // [["nombre", "Juan"], ["edad", 30]]
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
