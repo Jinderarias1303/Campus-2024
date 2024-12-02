@@ -7,11 +7,11 @@ const cuerpoWeb = function(valorTotal, valorMensual, inversion, INTERES, TIEMPO)
                         </tr>
                     <tr>
                         <td style='text-align: right;'>TASA DE INTERES(ANUAL)</td>
-                        <td style='text-align: right;'>${TIEMPO * 100 + "%"}</td>
+                        <td style='text-align: right;'>${INTERES  + "%"}</td>
                     </tr>
                     <tr>
                         <td style='text-align: right;'> NUMERO DE PAGOS(MENSUALES)</td>
-                        <td style='text-align: right;'>${INTERES}</td>
+                        <td style='text-align: right;'>${TIEMPO * 100}</td>
                     </tr>
                     <tr>
                         <td style='text-align: right;'>VALOR TOTAL</td>
