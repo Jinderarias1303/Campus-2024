@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obtener datos de un formulario</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+<body>
+    <h1 class="text-2xl font-bold">Obtener datos de un formulario</h1>
+
+    <form action="" onsubmit="return false" id="formu">
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre">
+        <br><br>
+        <label for="edad">Edad: </label>
+        <input type="number" name="edad" id="edad">
+        <!-- <br><br> -->
+        <button onclick="obtenerDatos()">Enviar</button>
+    </form>
+</body>
+<script>
+        function obtenerDatos(){
+const formu = document.forms["formu"];
+// let nombre = formu["nombre"].value;
+// let edad = formu["edad"].value;
+
+// alert(nombre + " " + edad);
+const datoFormu = new FormData(formu);
+datosFormu.forEach((k, v) => console.log(k + " -> " + v));
+
+const objForm = Object.fromEntries(datosFormu.entries());
+const serialform = JSON.stringify(datoFormu);
+
+console.log(serialform)
+
+}
+
+
+const fData = new FormData();
+//agregar datos al formData
+
+    fData.append("David", 20);
+    fData.append("Jenny", 15);
+    for(const [llave,valor] of fData)
+        console.log(llave + " " + valor);
+
+// formData.has(key) -> true | false si esta la llave en formData
+// formData.delete(key) -> elimina la llave valor si existe
+// formData.get(key) -> devuelve el valor de una llave
+// formData.getAll(key) -> obtiene todos los [key,  value]
+
+fData.getAll()
+</script>
+</html>

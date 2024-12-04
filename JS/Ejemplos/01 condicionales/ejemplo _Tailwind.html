@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind CSS</title>
+  <!-- Enlace al framework de Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <header class="bg-blue-500 text-white p-4">
+    <h1 class="text-2xl font-bold">Bienvenido a Tailwind CSS</h1>
+  </header>
+  
+  <main class="p-6">
+    <section class="mb-4">
+      <h2 class="text-xl font-semibold mb-2">Introducción</h2>
+      <p class="text-gray-700">
+        Este es un ejemplo básico de una página con Tailwind CSS.
+      </p>
+    </section>
+    <section>
+      <h2 class="text-xl font-semibold mb-2">Botón de ejemplo</h2>
+      <button class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">
+        ¡Haz clic aquí!
+      </button>
+    </section>
+  </main>
+
+  <div class="container mx- ">
+    <h1 class="text-2xl font-bold mb-4">Tabla de 8x8</h1>
+    <table class="table-auto border-collapse border border-gray-300 w-full text-center">
+      <thead class="bg-blue-500 text-white">
+        <tr>
+          <!-- Encabezados -->
+          <th class="border border-gray-300 px-4 py-2">Columna 1</th>
+          <th class="border border-gray-300 px-4 py-2">Columna 2</th>
+          <th class="border border-gray-300 px-4 py-2">Columna 3</th>
+          <th class="border border-gray-300 px-4 py-2">Columna 4</th>
+          <th class="border border-gray-300 px-4 py-2">Columna 5</th>
+          <th class="border border-gray-300 px-4 py-2">Columna 6</th>
+          <th class="border border-gray-300 px-4 py-2">Columna 7</th>
+          <th class="border border-gray-300 px-4 py-2">Columna 8</th>
+          <th class="border border-gray-300 px-4 py-2">Columna 9</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Filas -->
+        <!-- Cada fila alterna entre los colores de fondo -->
+        <!-- Repite 8 veces para tener una tabla completa -->
+        <tr class="bg-gray-100 hover:bg-gray-200">
+          <td class="border border-gray-300 px-4 py-2">1</td>
+          <td class="border border-gray-300 px-4 py-2">2</td>
+          <td class="border border-gray-300 px-4 py-2">3</td>
+          <td class="border border-gray-300 px-4 py-2">4</td>
+          <td class="border border-gray-300 px-4 py-2">5</td>
+          <td class="border border-gray-300 px-4 py-2">6</td>
+          <td class="border border-gray-300 px-4 py-2">7</td>
+          <td class="border border-gray-300 px-4 py-2">8</td>
+          <td class="border border-gray-300 px-4 py-2">9</td>
+        </tr>
+        <tr class="bg-white hover:bg-gray-200">
+          <td class="border border-gray-300 px-4 py-2">1</td>
+          <td class="border border-gray-300 px-4 py-2">2</td>
+          <td class="border border-gray-300 px-4 py-2">3</td>
+          <td class="border border-gray-300 px-4 py-2">4</td>
+          <td class="border border-gray-300 px-4 py-2">5</td>
+          <td class="border border-gray-300 px-4 py-2">6</td>
+          <td class="border border-gray-300 px-4 py-2">7</td>
+          <td class="border border-gray-300 px-4 py-2">8</td>
+          <td class="border border-gray-300 px-4 py-2">9</td>
+
+        </tr>
+        <!-- Repetir el mismo patrón para completar las filas restantes -->
+        <!-- Puedes copiar las filas y alternar los colores de fondo -->
+        <tr class="bg-gray-100 hover:bg-gray-200">
+          <td class="border border-gray-300 px-4 py-2">1</td>
+          <td class="border border-gray-300 px-4 py-2">2</td>
+          <td class="border border-gray-300 px-4 py-2">3</td>
+          <td class="border border-gray-300 px-4 py-2">4</td>
+          <td class="border border-gray-300 px-4 py-2">5</td>
+          <td class="border border-gray-300 px-4 py-2">6</td>
+          <td class="border border-gray-300 px-4 py-2">7</td>
+          <td class="border border-gray-300 px-4 py-2">8</td>
+          <td class="border border-gray-300 px-4 py-2">9</td>
+
+        </tr>
+        <!-- Continúa añadiendo filas hasta llegar a las 8 filas -->
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="bg-gray-800 text-white text-center p-4 mt-6">
+    <p>Creado con 💖 y Tailwind CSS</p>
+  </footer>
+</body>
+<!-- <script src="conductores.js"> -->
+
+</script>
+</html>
