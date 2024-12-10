@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <div style="border: 1px solid black; width: 30% ; height: 50%; ">
+        <header class="bg-blue-500 text-white p-4 ">
+            <h1 class="text-2xl font-bold ">Gestion de membresias de una farmacia</h1>
+        </header>
+
+        <br><br>
+        <div class="mb-4">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" value="" minlength="3"
+                maxlength="10" size="10">
+            <br><br>
+        </div>
+
+        <div class="mb-4">
+            <label for="fecha">Fecha de inscricion</label>
+            <input type="date" name="fecha" id="fecha" value="2006-10-04">
+            <br><br>
+        </div>
+
+        <div>
+            <label for="number">Duracion en dias:</label>
+            <input type="number" name="number" id="number">
+        </div>
+
+        <div>
+            <label for="button"></label>
+            <input type="button" name="button" id="button" >
+        </div>
+    </div>
+
+
+    <div class="container">
+        <h2 class="text-2xl font-bold"> verifique su membresia</h2>
+    </div>
+</body>
+
+</html>
