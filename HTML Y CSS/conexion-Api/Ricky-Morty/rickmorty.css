@@ -1,0 +1,17 @@
+h1{
+    text-align: center;
+}
+
+main{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div{
+    border: 1px solid gainsboro;
+    padding: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+}
