@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pedido</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+        <form id="pedido-form">
+            <div class="mb-4">
+                <label for="cliente" class="block text-sm font-medium text-gray-700">Nombre del cliente:</label>
+                <input type="text" id="cliente" name="cliente"
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                    placeholder="Nombre">
+            </div>
+            <div class="mb-4">
+                <label for="material" class="block text-sm font-medium text-gray-700">Material de la caja:</label>
+                <select id="material" name="material"
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                    <option>Plástico</option>
+                    <option>Cartón</option>
+                    <option>Madera</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <span class="block text-sm font-medium text-gray-700">Seleccione unas dimensiones para la caja:</span>
+                <div class="mt-2">
+                    <label class="inline-flex items-center">
+                        <input type="radio" name="dimension" value="Diminutas"
+                            class="text-blue-600 focus:ring-blue-500">
+                        <span class="ml-2 text-sm text-gray-700">Diminutas</span>
+                    </label>
+                </div>
+                <div class="mt-2">
+                    <label class="inline-flex items-center">
+                        <input type="radio" name="dimension" value="Medianas" class="text-blue-600 focus:ring-blue-500"
+                            checked>
+                        <span class="ml-2 text-sm text-gray-700">Medianas</span>
+                    </label>
+                </div>
+                <div class="mt-2">
+                    <label class="inline-flex items-center">
+                        <input type="radio" name="dimension" value="Grandes" class="text-blue-600 focus:ring-blue-500">
+                        <span class="ml-2 text-sm text-gray-700">Grandes</span>
+                    </label>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="comentarios" class="block text-sm font-medium text-gray-700">Comentarios:</label>
+                <textarea id="comentarios" name="comentarios" rows="3"
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                    placeholder="Que sea bonita"></textarea>
+            </div>
+            <button type="button" onclick="mostrarPedido()"
+                class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Enviar</button>
+        </form>
+        <div id="resultado" class="mt-4 text-sm text-gray-800 font-medium"></div>
+    </div>
+
+    <script>
+        function mostrarPedido() {
+            const cliente = document.getElementById('cliente').value;
+            const material = document.getElementById('material').value;
+            const dimension = document.querySelector('input[name="dimension"]:checked').value;
+            const comentarios = document.getElementById('comentarios').value;
+
+            const resultado = ` ${cliente} ha pedido una caja de ${material.toLowerCase()} con unas dimensiones ${dimension.toLowerCase()}. ${comentarios};`
+            document.getElementById('resultado').textContent = resultado;
+        }
+    </script>
+</body>
+
+</html>
