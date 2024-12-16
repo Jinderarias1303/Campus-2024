@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p align="left" id="parrafo"> Campus Lands</p>
+
+    <button onclick="obtenerAtributos()">Obtener Atributos</button><br><br>
+    <button onclick="CambiarAtributos()">Cambiar Atributos</button><br><br>
+
+    <button onclick="intercambiarAtributos()">ocultar parrafo</button><br><br>
+</body>
+<script>
+    const parrafo = document.getElementById("parrafo");
+
+    function obtenerAtributos(){
+        alert(parrafo.getAttribute("align"));
+    }
+    
+
+    function CambiarAtributos(){
+        const align = parrafo.getAttribute("align");
+        parrafo.setAttribute("align", align === "center" ? "left" : "center");
+    }
+
+    function intercambiarAtributos(){
+        const valor = parrafo.toggleAttribute("hidden");
+        const boton = document.querySelectorAll("button")[2];
+        boton.innerText = valor ? "Mostrar Parrafo" : "Ocultar Parrafo";
+    }
+</script>
+</html>

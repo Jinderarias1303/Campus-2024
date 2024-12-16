@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="max-w-md mx-auto p-6 border-2 border-gray-300 rounded-lg shadow-lg">
+        <form id="tempForm">
+            <div class="mb-4">
+                <label for="centigrados" class="block text-gray-700 font-medium">Grados centígrados:</label>
+                <input type="number" id="centigrados" name="centigrados" value=""
+                    class="mt-1 p-2 w-full border border-gray-300">
+            </div>
+            <div class="mb-4">
+                <label for="farenheit" class="block text-gray-700 font-medium">Grados Fahrenheit:</label>
+                <input type="number" id="farenheit" name="farenheit" value=""
+                    class="mt-1 p-2 w-full border border-gray-300">
+            </div>
+            <div class="flex justify-between">
+                <button type="button" class="w-1/2 bg-blue-500 text-white p-2 rounded-md"
+                    onclick="convertirCentigrados()">Convertir a Fahrenheit</button>
+                <button type="button" class="w-1/2 bg-green-500 text-white p-2 rounded-md"
+                    onclick="convertirFahrenheit()">Convertir a Centígrados</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+
+        function convertirCentigrados() {
+            let centigrados = document.getElementById('centigrados').value;
+
+
+            let fahrenheit = (centigrados * 9 / 5) + 32;
+            document.getElementById('farenheit').value = fahrenheit.toFixed(2);
+
+        }
+
+        function convertirFahrenheit() {
+            let fahrenheit = document.getElementById('farenheit').value;
+
+
+            let centigrados = (fahrenheit - 32) * 5 / 9;
+            document.getElementById('centigrados').value = centigrados.toFixed(2);
+
+        }
+    </script>
+</body>
+
+</html>
