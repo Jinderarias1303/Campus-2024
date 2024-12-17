@@ -1,0 +1,49 @@
+.bottonMiPokemon{
+    width: 100px;
+    height: 40px;
+    position: relative;
+    left: 14vw;
+    top: 5vw;
+    background-color: rgba(75, 155, 230, 0.911);
+    color: white;
+    border: 1px solid black;
+}
+.caja_imagen1{
+    border: 1px solid black;
+    width: 300px;
+    height: 150px;
+    position: relative;
+    left: 14vw;
+    top: 7vw;
+}
+.cosas{
+    position: relative;
+    left: 14vw;
+    top: 8vw;
+}
+.bottonLucha{
+    position: relative;
+    top: 0vw;
+    left: 35vw;
+    width: 100px;
+    height: 40px;
+    background-color: rgba(230, 75, 75, 0.911);
+    color: white;
+    border: 1px solid black;
+}
+.texto_principal{
+    text-align: center;
+}
+.img_pokemon{
+    overflow: hidden;   
+}
+.bottonGanador{
+    position: relative;
+    left: 50vw;
+    top: 2vw;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(255, 166, 0);
+    color: teal;
+    border: 1px solid rgb(235, 235, 235);
+}

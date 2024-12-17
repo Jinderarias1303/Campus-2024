@@ -1,0 +1,15 @@
+<style>
+    .red{
+        background-color: red;
+    }
+</style>
+<button>saludar</button>
+<script>
+    const button = document.querySelector("button");
+
+    const showMessage = () =>alert("¡ boton clickqueado!");
+    const changeColor = () => button.classList.toString("red");
+
+    button.addEventListener("click", showMessage);
+    button.addEventListener("click", changeColor);
+</script>
