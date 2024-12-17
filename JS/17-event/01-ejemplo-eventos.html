@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplo Eventos</title>
+</head>
+<style>
+    .cambiarcolor{
+        color: red;
+    }
+</style>
+<body>
+    <h1> 01 ejemplo de eventos</h1>
+    <hr>
+
+    <button id="boton"> eventos del botón</button>
+</body>
+<script>
+    const boton = document.getElementById("boton");
+
+    boton.onclick = () => alert("haz precionado el boton");
+
+    boton.addEventListener("mouseover", () =>{
+        const h1 = document.querySelector("h1");
+        //h1.setAttribute("class", "cambiarcolor")
+        h1.style.color = "red"
+    });
+
+    boton.addEventListener("mouseout", () =>{
+        const h1 = document.querySelector("h1");
+        //h1.setAttribute("class","cambiarcolor")
+        h1.style.color = "blue";
+    });
+</script>
+</html>

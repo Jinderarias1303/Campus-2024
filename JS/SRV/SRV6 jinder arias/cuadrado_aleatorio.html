@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuadrado Aleatorio</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+        #cuadrado {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            background-color: #ffd000; 
+            border: 2px solid black;
+            cursor: pointer;
+        }
+        #mensaje {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="mensaje">Intenta atrapar el cuadrado</div>
+    <div id="cuadrado"></div>
+
+    <script>
+        const cuadrado = document.getElementById('cuadrado');
+        const anchoVentana = window.innerWidth;
+        const altoVentana = window.innerHeight;
+
+        function moverCuadrado() {
+            const x = Math.random() * (anchoVentana - 100);
+            const y = Math.random() * (altoVentana - 100);
+            cuadrado.style.left = `${x}px`;
+            cuadrado.style.top = `${y}px`;
+        }
+
+        
+        moverCuadrado();
+
+        cuadrado.addEventListener('mouseover', moverCuadrado);
+    </script>
+</body>
+</html>
