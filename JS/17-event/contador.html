@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aumentar disminuir contador</title>
+    <style>
+        .caja_mayor{
+            background-color:  yellow;
+            width: 50%;
+            margin: 50px auto;
+        }
+        .Aumentar{
+            border-radius: 0.5vw;
+            height: 50px;
+            width: 150px;
+            position: relative;
+            left: 18vw;
+            background-color:rgb(0, 179, 255);
+            color:black;
+            border: 0px solid black;
+        }
+        .Disminuir{
+            border-radius: 0.5vw;
+            height: 50px;
+            width: 150px;
+            position: relative;
+            left: 20vw;
+            background-color: red;
+            color: white;
+            border: 0px solid black;
+        }
+        h1{
+            position: relative;
+            left: 23vw;
+        }
+        h2{
+            position: relative;
+            left: 24vw;
+        }
+        h3{
+            position: relative;
+            left: 18vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="caja_mayor">
+    <h3>Ejemplo Eventos JS - Aumentar y Disminuir</h3>
+    <br><br>
+    <h1>Contador</h1>
+    <button class="Aumentar" id="aumentar">Aumentar</button> 
+    <button class="Disminuir" id="disminuir">Disminuir</button>
+    <br>
+    <h2 id="contador">contador:</h2>
+    </div>
+</body>
+<script>
+    let aumen = document.getElementById("aumentar");
+    let dism = document.getElementById("disminuir");
+    let contador = document.getElementById("contador");
+
+    let cont = 0;
+    function sum () {
+        cont++;
+        contador.textContent = `Contador:${cont}`;
+    }
+
+    function res () {
+        cont--;
+        contador.textContent = `Contador: ${cont}`;
+    }
+
+    aumen.addEventListener("click", sum);
+    dism.addEventListener("click", res);
+
+</script>
+</html>

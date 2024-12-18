@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #b3e0f2;
+            font-family: Arial, sans-serif;
+        }
+        .calculadora {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            width: 320px;
+            gap: 5px;
+            background-color: #f8f8f8;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .pantalla {
+            grid-column: span 4;
+            background-color: #333;
+            color: white;
+            text-align: right;
+            padding: 15px;
+            font-size: 2rem;
+            border-radius: 5px;
+        }
+        button {
+            border: none;
+            background-color: #f1f1f1;
+            font-size: 1.5rem;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background-color: #e0e0e0;
+        }
+        .operador {
+            background-color: #f0a500;
+            color: white;
+        }
+        .operador:hover {
+            background-color: #d48e00;
+        }
+        .igual {
+            grid-row: span 4;
+            background-color: #ff5e57;
+            color: white;
+        }
+        .igual:hover {
+            background-color: #d94e48;
+        }
+        .clear {
+            background-color: #c4c4c4;
+        }
+        .clear:hover {
+            background-color: #b3b3b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculadora">
+        <div id="pantalla" class="pantalla">0</div>
+        <button class="operador">+</button>
+        <button class="operador">-</button>
+        <button class="operador">×</button>
+        <button class="operador">÷</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button class="igual">=</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>0</button>
+        <button>.</button>
+        <button class="clear">C</button>
+    </div>
+
+    <script>
+        
+        let pantalla = document.getElementById('pantalla');
+        let operacionActual = ''; 
+        let operandoAnterior = null; 
+        let operador = null; 
+        function actualizarPantalla(valor) {
+            pantalla.textContent = valor;
+        }
+
+        function limpiar() {
+            operacionActual = '';
+            operandoAnterior = null;
+            operador = null;
+            actualizarPantalla('0');
+        }
+
+        function calcular() {
+            if (operandoAnterior !== null && operador !== null) {
+                const operando1 = parseFloat(operandoAnterior);
+                const operando2 = parseFloat(operacionActual);
+
+                if (isNaN(operando1) || isNaN(operando2)) return;
+
+                let resultado;
+
+                switch (operador) {
+                    case '+':
+                        resultado = operando1 + operando2;
+                        break;
+                    case '-':
+                        resultado = operando1 - operando2;
+                        break;
+                    case '×':
+                        resultado = operando1 * operando2;
+                        break;
+                    case '÷':
+                        if (operando2 === 0) {
+                            resultado = 'Error';
+                        } else {
+                            resultado = operando1 / operando2;
+                        }
+                        break;
+                    default:
+                        return;
+                }
+
+                operacionActual = resultado.toString();
+                operador = null;
+                operandoAnterior = null;
+                actualizarPantalla(operacionActual);
+            }
+        }
+
+        document.querySelectorAll('button').forEach(boton => {
+            boton.addEventListener('click', () => {
+                const valor = boton.textContent;
+
+                if (!isNaN(valor) || valor === '.') {
+                    if (valor === '.' && operacionActual.includes('.')) return; 
+                    operacionActual += valor;
+                    actualizarPantalla(operacionActual);
+                } else if (valor === 'C') {
+                    
+                    limpiar();
+                } else if (valor === '=') {
+                    calcular();
+                } else {
+                    if (operacionActual === '' && operandoAnterior === null) return;
+
+                    if (operandoAnterior === null) {
+                        operandoAnterior = operacionActual;
+                    } else {
+                        calcular();
+                        operandoAnterior = operacionActual;
+                    }
+
+                    operacionActual = '';
+                    operador = valor;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
