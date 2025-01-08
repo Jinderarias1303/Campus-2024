@@ -1,0 +1,77 @@
+body{
+    background: linear-gradient(to top, #4286f4, #373B44);
+    box-sizing: border-box;
+}
+.contenedor_principal{
+    border-radius: 2vw;
+    border: 1px solid black;
+    background-color: rgba(0, 132, 255, 0.938);
+    width: 80%;
+    max-width: 500px;
+    height: 80vh;
+    max-height: 500px;
+    margin: 5vh auto;
+    overflow: hidden;
+}
+.botones{
+    border-radius: 2vw;
+    border: 1px solid black;
+    background-color: rgba(0, 132, 255, 0.938);
+    width: 80%;
+    max-width: 500px;
+    height: 80vh;
+    max-height: 500px;
+    margin: 5vh auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    overflow: hidden;
+}
+.btn{
+    border: 1px solid #000;
+    height:80% ;
+    width: 80%;
+    margin: 10px;
+    border-radius: 1vw;
+    cursor: pointer;
+    position: relative;
+    left: 5%;
+    top: 5%;
+    background-color: aquamarine;
+    font-size: 3rem;
+    font-family: cursive;
+    color: #000;
+}
+.turno{
+    position: relative;
+    left: 40%;
+}
+h3{
+    
+    position: relative;
+    left: 25%;
+    font-family: cursive;
+    color: white;
+    font-size: 3rem;
+}
+.nombre{
+    position: relative;
+    left: 30%;
+    top: 10%;
+    font-family: cursive;
+    color: rgb(0, 0, 0);
+    width: 40%;
+    height: 8%;
+    border-radius: 1vw;
+    border: 0px ;
+    font-size: rem;
+}
+.iniciar{
+    border-radius: 1vw;
+    width: 15%;
+    height: 8%;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    left: 45%;
+    top: 20%;
+}
